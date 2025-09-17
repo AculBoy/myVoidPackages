@@ -22,5 +22,4 @@ do_install() {
     # Copy the files and directories
     vcopy usr/share/* /usr/share/
     vcopy opt/Vesktop/* /opt/Vesktop/
-<<<<<<< HEAD
 }
