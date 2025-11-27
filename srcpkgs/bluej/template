@@ -1,0 +1,16 @@
+# Template file for 'bluej'
+pkgname=bluej
+version=5.5.0
+revision=1
+archs="x86_64"
+short_desc="A Java IDE for learning"
+maintainer="LucaG <luca@goedde.me>"
+license="GPL-3.0-or-later"
+homepage="https://bluej.org"
+#changelog=""
+distfiles="https://github.com/k-pet-group/BlueJ-Greenfoot/releases/download/BLUEJ-RELEASE-${version}/BlueJ-linux-x64-${version}.deb"
+checksum=c060301af30705bd231eaf37655eb0198ce3bdcaaa228393c09622003f5a4a02
+
+do_install() {
+	vcopy "*" /
+}

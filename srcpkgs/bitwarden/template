@@ -1,0 +1,19 @@
+# Template file for 'bitwarden'
+pkgname=bitwarden
+version=2025.10.0
+revision=1
+archs="x86_64"
+hostmakedepends="rpmextract"
+short_desc="An FOSS Password manager"
+maintainer="LucaG <luca@goedde.me>"
+license="GPL-3.0-or-later"
+homepage="https://bitwarden.com/"
+#changelog=""
+distfiles="https://github.com/bitwarden/clients/releases/download/desktop-v${version}/Bitwarden-${version}-x86_64.rpm"
+checksum=0cfe45dc23008a977eb18155770fc833668b4e433523ea3f89506448410baf10
+
+do_install() {
+	vcopy "*" /
+
+	vmkdir usr/share/pixmaps
+}
