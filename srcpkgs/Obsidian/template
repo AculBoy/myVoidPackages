@@ -1,0 +1,18 @@
+# Template file for 'Obsidian'
+pkgname=Obsidian
+version=1.9.14
+revision=1
+archs="x86_64"
+# hostmakedepends="" # deb extract?
+short_desc="Obsidian is a Markdown editor with many features."
+maintainer="LucaG <luca@goedde.me>"
+license="GPL-3.0-or-later"
+homepage="https://obsidian.md/"
+changelog="https://obsidian.md/changelog/"
+distfiles="https://github.com/obsidianmd/obsidian-releases/releases/download/v${version}/obsidian_${version}_amd64.deb"
+checksum=d1ad758b1977a34ff7d0c906f11e0e88aa0a940fa4a22b83d357dab8ddd32d37
+
+do_install() {
+	vcopy "*" /
+	vmkdir usr/share/pixmaps
+}
