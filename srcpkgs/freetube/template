@@ -1,0 +1,21 @@
+# Template file for 'freetube'
+pkgname=freetube
+version=0.23.12
+revision=1
+archs="x86_64"
+short_desc="A free and private YouTube Client"
+maintainer="LucaG <luca@goedde.me>"
+license="GPL-3.0-or-later"
+homepage="https://freetubeapp.io/"
+changelog="https://github.com/FreeTubeApp/FreeTube/releases"
+distfiles="https://github.com/FreeTubeApp/FreeTube/releases/download/v${version}-beta/freetube_${version}_beta_amd64.deb"
+checksum=a330ec57bf96822fd4bd8a2675a00e919c932adefe04a09eda1ba8b9d79e3046
+
+do_install() {
+    vmkdir /usr/share
+    vmkdir /opt/FreeTube
+
+    # Copy the files and directories
+    vcopy usr/share/* /usr/share/
+    vcopy opt/FreeTube/* /opt/FreeTube/
+}
