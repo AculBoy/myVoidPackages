@@ -1,0 +1,31 @@
+# Template file for 'heroic'
+pkgname=heroic
+version=2.18.1
+revision=1
+archs="x86_64"
+build_style=fetch
+depends="fuse gawk python-setuptools python3-wheel legendary"
+short_desc="Native GUI Epic Games Launcher for Linux, Windows and Mac"
+maintainer="Guilherme Machado <machadofguilherme@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher"
+distfiles="https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v${version}/Heroic-${version}-linux-amd64.deb"
+checksum=4f696b7593107a90ed3ff947a4b1e0dbf1734ba41cbcb8f366559fe963c43fad
+nopie=true
+
+post_extract() {
+	ar -x Heroic-${version}-linux-amd64.deb
+	bsdtar -xf data.tar.xz
+}
+
+do_install() {
+	vmkdir opt
+	vmkdir usr/share
+	vmkdir usr/share/doc
+	vmkdir usr/share/applications
+	vmkdir usr/share/icons
+	vcopy opt/Heroic opt
+	vcopy usr/share/applications usr/share
+	vcopy usr/share/icons usr/share
+	vcopy usr/share/doc/heroic usr/share/doc
+}
