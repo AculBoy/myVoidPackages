@@ -1,6 +1,6 @@
 # Template file for 'spotify'
 pkgname=spotify
-version=1.2.79
+version=1.2.77
 revision=1
 _subver=427.g80eb4a07
 archs="x86_64"
