@@ -1,7 +1,8 @@
 # Template file for 'flatpak'
 pkgname=flatpak
-version=1.18.2
-revision=1
+reverts="1.19.0_1"
+version=1.18.4
+revision=2
 build_style=meson
 build_helper="gir"
 configure_args="
@@ -12,12 +13,15 @@ configure_args="
  -Dselinux_module=disabled
  -Dgdm_env_file=true
  -Dsystem_fusermount=/usr/bin/fusermount3
+ -Dwayland_security_context=enabled
  $(vopt_feature gir)"
 hostmakedepends="bubblewrap gettext glib-devel libxslt pkg-config bison
- python3-parsing xmlto docbook-xml docbook-xsl xdg-dbus-proxy polkit-devel"
+ python3-parsing xmlto docbook-xml docbook-xsl xdg-dbus-proxy polkit-devel
+ wayland-devel"
 makedepends="AppStream-devel libarchive-devel gpgme-devel json-glib-devel
  libcap-devel libostree-devel libseccomp-devel polkit-devel dconf-devel
- fuse3-devel libcurl-devel libxml2-devel gdk-pixbuf-devel"
+ fuse3-devel libcurl-devel libxml2-devel gdk-pixbuf-devel wayland-devel
+ wayland-protocols"
 depends="bubblewrap gnupg>=2 xdg-dbus-proxy"
 checkdepends="attr-progs bubblewrap dbus gnupg socat which xdg-dbus-proxy"
 short_desc="Application sandboxing and distribution framework"
@@ -26,7 +30,7 @@ license="LGPL-2.1-or-later"
 homepage="https://flatpak.org/"
 changelog="https://github.com/flatpak/flatpak/raw/main/NEWS"
 distfiles="https://github.com/flatpak/flatpak/releases/download/${version}/flatpak-${version}.tar.xz"
-checksum=800ff8cb14c369a3c19984932ae2cbea1b0d38363daa57cfb8ef04b8d7f08e10
+checksum=b899a7a00c48d2c626cb8ec33fe556720b376c25805d7222430c0fdca4c6ac8d
 
 build_options="gir"
 build_options_default="gir"

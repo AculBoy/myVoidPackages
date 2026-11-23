@@ -1,12 +1,9 @@
 # Template file for 'kf6-ktexteditor'
 # group=kde-frameworks
 pkgname=kf6-ktexteditor
-version=6.29.0
+version=6.31.0
 revision=1
 build_style=cmake
-configure_args="
- -DKDE_INSTALL_QMLDIR=lib/qt6/qml
- -DKDE_INSTALL_QTPLUGINDIR=lib/qt6/plugins"
 hostmakedepends="extra-cmake-modules qt6-tools qt6-base kf6-kauth-tools
  qt6-declarative-host-tools gettext kf6-kconfig"
 makedepends="kf6-karchive-devel kf6-kauth-devel kf6-kconfig-devel
@@ -20,7 +17,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/ktexteditor"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=ab28187332c2e4af1706999bc1fb51256f32dc2ebd28bc21081062b8ff1e4ce7
+checksum=02e2d9dbe40b517861af7ad8dd7151d08cbf84be9f8c4e0fecf005b3fc741dac
 
 # stage builds
 makedepends+=" kf6-base"

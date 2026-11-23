@@ -1,17 +1,17 @@
 # Template file for 'kf6-kglobalaccel'
 # group=kde-frameworks
 pkgname=kf6-kglobalaccel
-version=6.29.0
-revision=2
+version=6.31.0
+revision=1
 build_style=cmake
-hostmakedepends="extra-cmake-modules qt6-tools qt6-base "
+hostmakedepends="extra-cmake-modules qt6-tools qt6-base"
 makedepends="qt6-base-private-devel qt6-declarative-devel"
 short_desc="KDE Global desktop keyboard shortcuts"
 maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/kglobalaccel"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=71f4b08dfa993a1cfaccee004401234ba21754d48955733fc9be13ccc940b444
+checksum=114f1de1c4e2581f7a371939d7c01d6f836a4e30bb0ec3827c02cddb82209118
 
 # stage builds
 makedepends+=" kf6-base"

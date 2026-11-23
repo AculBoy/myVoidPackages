@@ -1,7 +1,7 @@
 # Template file for 'kf6-solid'
 # group=kde-frameworks
 pkgname=kf6-solid
-version=6.29.0
+version=6.31.0
 revision=1
 build_style=cmake
 hostmakedepends="extra-cmake-modules qt6-tools qt6-base flex pkg-config"
@@ -13,7 +13,7 @@ maintainer="John <me@johnnynator.dev>"
 license="LGPL-2.1-or-later"
 homepage="https://invent.kde.org/frameworks/solid"
 distfiles="${KDE_SITE}/frameworks/${version%.*}/${pkgname#kf6-}-${version}.tar.xz"
-checksum=1f46e8a508cc39ae20736861b2d19a73148333f2e23495c115aa2680538a86c2
+checksum=82950a3d19a8b3ccac11bbcc297e132b975921e25b386f462abe5727a78f1e35
 
 # stage builds
 makedepends+=" kf6-base"
